@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Clonish</title>
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+</head>
+<style type="text/css">
+body
+{
+	margin:0;
+	padding:0;
+}
+#game
+{
+	background-color:#333;
+}
+</style>
+<body>
+	<center>
+	<canvas id="game" width="720" height="360">
+
+	</canvas>
+	</center>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/easeljs.min.js"></script>
+<script type="text/javascript" src="js/GUI.js"></script>
+<script type="text/javascript" src="js/Map.js"></script>
+<script type="text/javascript" src="js/Character/player.js"></script>
+<script type="text/javascript" src="js/Game.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var game = new Game();
+	var time = new Date().getTime(), delta = 0, oldTime = time;
+
+	setInterval(function(){
+		time = new Date().getTime();
+
+		delta = time - oldTime;
+		game.render(delta);
+		time = oldTime;
+	}, 16);
+
+});
+</script>
+</body>
+</html>

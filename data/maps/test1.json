@@ -1,0 +1,71 @@
+{
+    "name" : "test1",
+    "ext" : ".json",
+    "width" : 101,
+    "height" : 80,
+    "data": [
+        [
+            "grass",
+            "dirt",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ],
+        [
+            "grass",
+            "grass",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ],
+        [
+            "grass",
+            "dirt",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ],
+        [
+            "grass",
+            "dirt",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ],
+        [
+            "grass",
+            "grass",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ],
+        [
+            "grass",
+            "dirt",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ],
+        [
+            "grass",
+            "dirt",
+            "stone",
+            "grass",
+            "dirt",
+            "stone",
+            "stone"
+        ]
+    ]
+}

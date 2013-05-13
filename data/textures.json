@@ -1,0 +1,8 @@
+{
+    "test1": {
+        "grass": "img/textures/grass.png",
+        "dirt": "img/textures/dirt.png",
+        "grass_tile" : "img/textures/grass_stone_tile.png",
+        "stone" : "img/textures/stone.png"
+    }
+}
