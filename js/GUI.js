@@ -41,5 +41,7 @@ function MovementArrow(canvas)
 	//Register click functions
 	$("#game").on("click", function(e){
 		console.log(e);
+		var x = e.pageX;
+		var y = e.pageY;
 	});
 }
