@@ -55,14 +55,42 @@ function Map(map)
 
 	this.draw = function(ctx)
 	{
-		for(var y = 0; y < map.data.length; y++)
+		/*
+			Checks to see which variables are true, if they are then they will move the offset
+		*/
+
+		if(up)
 		{
-			for(var x = 0; x < map.data[0].length; x++)
+			yOffset += offsetVelocity;
+		}
+		else if(left)
+		{
+			xOffset += offsetVelocity;
+		}
+		else if(right)
+		{
+			xOffset -= offsetVelocity;
+		}
+		else if(down) //down
+		{
+			yOffset -= offsetVelocity;
+		}
+
+		//Calculates where to start drawing and where to stop
+		var startX = Math.floor(Math.abs(xOffset) / map.width);
+		var startY = Math.floor(Math.abs(yOffset) / map.height);
+
+		var endX = Math.floor((canvas.width / map.width) + startX + 2);
+		var endY = Math.floor((canvas.height / map.height) + startY + 2);
+
+		for(var y = startY; y < endY; y++)
+		{
+			for(var x = startX; x < endX; x++)
 			{
 				var textures = map.textures;
 				var textureName = map.data[x][y];
 
-				ctx.drawImage(images[textureName], x * map.width, y * map.height);
+				ctx.drawImage(images[textureName], (x * map.width) + xOffset, (y * map.height) + yOffset);
 			}
 
 		}
@@ -94,7 +122,5 @@ function MapGenerator()
 				map.data[y][x] = blocks[random];
 			}
 		}
-
-		//console.log(map);
 	}
 }

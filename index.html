@@ -21,6 +21,7 @@ body
 
 	</canvas>
 	</center>
+<script type="text/javascript" src="js/statics.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/easeljs.min.js"></script>
 <script type="text/javascript" src="js/GUI.js"></script>
@@ -29,6 +30,11 @@ body
 <script type="text/javascript" src="js/Game.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	var $canvas = $("#game");
+	
+	$canvas.attr('width', window.innerWidth);
+	$canvas.attr('height', window.innerHeight);
+
 	var game = new Game();
 	var time = new Date().getTime(), delta = 0, oldTime = time;
 
@@ -39,7 +45,6 @@ $(document).ready(function(){
 		game.render(delta);
 		time = oldTime;
 	}, 16);
-
 });
 </script>
 </body>
